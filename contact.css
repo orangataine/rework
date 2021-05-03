@@ -1,0 +1,175 @@
+body {
+  font-family: "IBM Plex Mono", monospace;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  animation: drop.5s ease;
+  cursor: crosshair;
+}
+
+.landing-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.landing-header a {
+  text-decoration: none;
+  color: #082ad9;
+  margin-right: 15px;
+}
+
+header {
+  display: flex;
+  width: 90%;
+  height: 8vh;
+  margin: auto;
+  align-items: center;
+  font-size: 12px;
+  animation: drop 0.5s ease;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.home {
+  position: absolute;
+  top: 40%;
+  left: -10%;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 550px;
+  background: transparent;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.wrapper .title h1 {
+  color: #082ad9;
+  text-align: center;
+  margin-bottom: 25px;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid #082ad9; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.contact-form {
+  display: flex;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4%;
+}
+
+.input-fields,
+.msg {
+  width: 48%;
+}
+
+.input-fields .input,
+.msg textarea {
+  margin: 10px 0;
+  background: transparent;
+  border: 0px;
+  border-bottom: 1px solid #082ad9;
+  padding: 10px;
+  color: #082ad9;
+  width: 100%;
+}
+
+.btn {
+  color: white;
+  background-color: #082ad9;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 2px;
+  cursor: crosshair;
+  filter: drop-shadow(0px 5px 3px rgba(0, 0, 0, 0.11));
+  animation: drop 3s ease;
+  opacity: 1;
+  transition: 0.3s;
+  font-family: "IBM Plex Mono", monospace;
+  padding: 8px 18px;
+  animation: drop 0.3s ease;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.msg textarea {
+  height: 208px;
+}
+
+::-webkit-input-placeholder {
+  color: #082ad9;
+}
+::-moz-placeholder {
+  color: #082ad9;
+}
+:-ms-input-placeholder {
+  color: #082ad9;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-form {
+    flex-direction: column;
+  }
+  .msg textarea {
+    height: 80px;
+  }
+  .input-fields,
+  .msg {
+    width: 100%;
+  }
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #082ad9;
+  }
+}
+
+.home:hover {
+  opacity: 0.6;
+}
+.btn:hover {
+  opacity: 0.6;
+}
